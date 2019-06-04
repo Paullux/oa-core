@@ -30,3 +30,5 @@ requirements.txt est disponible dans le dépôt.
 * Dîtes "Lance Assistant !" pour lancer le cerveau "root". Dîte "Démarre Cerveau !" et vous entenderez la réponse, "Salut tout le monde !"
 * Dîtes "Liste commandes !" pour obtenir la liste des commandes vocales disponibles.
 * Ajouter les vôtres !
+
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/TudsmbyAYkQ/0.jpg)](http://www.youtube.com/watch?v=TudsmbyAYkQ)
