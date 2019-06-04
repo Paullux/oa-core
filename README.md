@@ -4,7 +4,7 @@ Il s'agit d'un assistant vocale open source en cours de développement. Pour vou
 
 Open Assistant est un assistant personnel privé et open source, il est personnalisable pour obtenir un système d'exploitation utilisable uniquement par des commandes vocales.
 
-Mon but est la traduction en français du projet et d'ajout de nouvelles commandes vocales afin d'avoir un système complet.
+Mon but est la traduction en français du projet et d'ajouter de nouvelles commandes vocales afin d'avoir un système complet.
 Le projet original en anglais est disponible à l'adresse suivante [Open Assistant](http://openassistant.org/)
 
 # Installation
