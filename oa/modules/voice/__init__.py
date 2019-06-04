@@ -15,11 +15,17 @@ if flMac:
     import subprocess
 else:
     import pyttsx3
+    import os
+    TMP_FILE = "/tmp/tts_temp_sample"
 
 
 def _in():
     if not flMac:
         tts = pyttsx3.init()
+        #voice = tts.getProperty('voices')[26] # the french voice
+        #tts.setProperty('voice', 'french+f2')
+        #tts.setProperty('rate', 120)
+        #tts.runAndWait()
 
     while not oa.core.finished.is_set():
         s = get()
@@ -35,8 +41,10 @@ def _in():
             _msg.stdout.close()
             _tts.communicate()
         else:
-            tts.say(s)
-            tts.runAndWait()
+            #tts.say(s)
+            #tts.runAndWait()
+            os.system("pico2wave -l fr-FR -w {}{} \"{}\"".format(TMP_FILE,".wav", s.lower()))
+            os.system("aplay -q {}{}".format(TMP_FILE, ".wav"))
 
         # Wait until speaking ends.
         # Continue ear (listening). Unmute TTS.

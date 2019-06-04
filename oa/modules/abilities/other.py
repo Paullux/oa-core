@@ -14,28 +14,28 @@ from oa.modules.abilities.system import read_file
 
 def diagnostics():
     """ Run system diagnostics. """
-    response = '- Running diagnostics... '
+    response = 'Lancement des diagnostiques... '
 
     # Processor Temperature.
-    if hasattr(psutil, "sensors_temperatures"):
+    if hasattr(psutil, "sondes_de_temperatures"):
         temps = psutil.sensors_temperatures()
         if not temps:
-            response += "Unable to read temperature.\n"
+            response += "Impossible de lire la temperature.\n"
         else:
             for name, entries in temps.items():
                 for entry in entries:
-                    response += 'Proccessor temperature is currently %.0f degrees Centegrade...\n' %entry.current
+                    response += 'La temperature du proccesseur est actuellement de %.0f degrés centigrade...\n' %entry.current
                     break
                 break
 
     # Memory Free.
-    response += 'System memory has %.0f Gigabytes free...\n' %bytes2gb(oa.sys.free_memory())
+    response += 'La memoire système est a %.0f Gigaoctet de libre...\n' %bytes2gb(oa.sys.free_memory())
 
     # Drive Space Free.
-    response += 'Internal hard drive has %.0f Gigabytes free...\n' %bytes2gb(psutil.disk_usage('/').free)
+    response += 'Le disque dur interne est libre a %.0f Gigaoctet...\n' %bytes2gb(psutil.disk_usage('/').free)
 
     # Network Status.
-    response += switch(is_online(), True, 'Internet access is currently available.', 'We are offline.')
+    response += switch(is_online(), True, 'L\'accès à Internet est opérationnel.', 'Nous sommes hors-ligne.')
 
     say(response)
 
@@ -68,20 +68,20 @@ def read_forecast():
     # Weather For Amberg, Germany.
 
     api_key = "e3f8667cb539171dc2f4b389d33648ce"
-    lat = 49.44287
-    lng = 11.86267
+    lat = 47.409342
+    lng = 0.681183
 
-    forecast = forecastio.load_forecast(api_key, lat, lng, lang='en')
+    forecast = forecastio.load_forecast(api_key, lat, lng, lang='fr')
     byNow = forecast.currently()
     byHour = forecast.hourly()
     byDay = forecast.daily()
-    weather_summary = """ - The weather is currently %s.\n The temperature is %d degrees Celsius.\n %s \n %s""" %(byNow.summary, int(byNow.temperature),byHour.summary,byDay.summary)
+    weather_summary = """La météo actuelle est %s.\n La temperature est de %d degrés Celsius.\n %s \n %s""" %(byNow.summary, int(byNow.temperature),byHour.summary,byDay.summary)
     say(weather_summary)
 
 def read_news_feed(news_feed, category):
     rss = feedparser.parse(news_feed)
     info(rss['feed']['title'])
-    say('- Reading %s news.' %category)
+    say('Lecture de l\'actualité %s.' %category)
     headline_count = 1
 
     # Amount of headlines to read.
@@ -122,12 +122,12 @@ def say_random(slist):
 def say_time():
     """ Speak the current time. """
     time = oa.sys.time_text()
-    say('- The time is %s.' %time)
+    say('Il est %s.' %time)
 
 def say_day():
     """ Speak the current day. """
     day = oa.sys.day_name()
-    say('- Today is %s.' %day)
+    say('Nous sommes aujourd\'hui le %s.' %day)
 
 def say_last_command(string = ''):
     say(string + ' ' + oa.last_command)

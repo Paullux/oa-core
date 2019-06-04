@@ -37,10 +37,10 @@ class Recognizer(GObject.GObject):
             ' ! audioresample' +
             ' ! pocketsphinx {}'.format(' '.join([
                     '{}={}'.format(opt, val) for opt, val in [
-                        ('lm', config.get('lang_file', None)),
-                        ('dict', config.get('dic_file', None)),
-                        ('fsg', config.get('fsg_file', None)),
-                        ('hmm', config.get('hmm_path', None)),
+                        ('lm', config.get('lang_file', fr)),
+                        ('dict', config.get('dic_file', fr)),
+                        ('fsg', config.get('fsg_file', fr)),
+                        ('hmm', config.get('hmm_path', fr)),
                     ] if val is not None
                 ])) +
             ' ! appsink sync=false'
