@@ -1,41 +1,32 @@
 # Open Assistant
 
-Open source voice assistant development. Make your own minds!
+Il s'agit d'un assistant vocale open source en cours de développement. Pour vous permettre de créer vous-même votre AI !
 
-Open Assistant is a private open source personal assistant prototype able to complete operating system tasks using vocal commands.
+Open Assistant est un assistant personnel privé et open source, il est personnalisable pour obtenir un système d'exploitation utilisable uniquement par des commandes vocales.
+
+Mon but est la traduction en français du projet et d'ajout de nouvelles commandes vocales afin d'avoir un système complet.
+Le projet original en anglais est disponible à l'adresse suivante [Open Assistant](http://openassistant.org/)
 
 # Installation
 
-## Windows
-
-Windows (Click & Run)
-
-* Download http://openassistant.org/download/oa_0.21_windows.zip
-* Unzip package
-* Launch `oa.exe` in "Open Assistant" folder
-
-Windows Python Install (Python 3.x)
-
-* Install [common list of Python packages](https://www.python.org/downloads/windows/)
-* Install Windows-specific dependencies: ``pip install pywin32``
-* Install Python dependencies: `pip install -r requirements.txt`
+requirements.txt est disponible dans le dépôt.
 
 ## Ubuntu Linux
 
-* Install system requirements ``sudo apt-get install -y python python-dev python-pip build-essential swig git libpulse-dev espeak``
-* Install Python dependencies: `pip install -r requirements.txt`
+* Installer les paquets nécéssaires suivants : ``sudo apt-get install -y python python-dev python-pip build-essential swig git libpulse-dev espeak libttspico-utils``
+* Installer les dépendances Python : `pip install -r requirements.txt`
 
 ## Arch Linux
 
-* Install system requirements ``sudo pacman -S swig espeak``
-* Install Python dependencies: `pip install -r requirements.txt`
+* Installer les paquets nécéssaires suivants : ``trizen -S swig espeak pico-tts svox-pico-bin`` ou ``yaourt -S swig espeak pico-tts svox-pico-bin``
+* Installer les dépendances Python : `pip install -r requirements.txt`
 
-# Using Open Assistant
+# Pour utiliser Open Assistant
 
-* [Download Open Assistant](https://github.com/openassistant/oa-core/archive/master.zip)
-* Run Open Assistant from within the unzipped directory: ``python -m oa``
-* Make sure your microphone is working and levels are set properly.
-* Say "Boot Mind!" as a listening test. If you hear R2D2, boot mind is listening.
-* Say "Open Assistant!" to launch root mind. Say "Root Mind!" to see if you can get the reply, "Hello World!"
-* Say "List commands!" to get a list of available voice commands.
-* Add your own!
+* [Téléchargez Open Assistant](https://github.com/Paullux/oa-core/archive/master.zip)
+* Lancer Open Assistant dans le dossier dézippé, issue du téléchargement : ``python -m oa``
+* Vérifier que votre microphone est opérationnel et que les différents niveaux sonores sont correctement réglés.
+* Dîtes "Démarre Cerveau !" pour le test d'écoute. Si vous entendez R2D2, le cerveau "boot" vous entend.
+* Dîtes "Lance Assistant !" pour lancer le cerveau "root". Dîte "Démarre Cerveau !" et vous entenderez la réponse, "Salut tout le monde !"
+* Dîtes "Liste commandes !" pour obtenir la liste des commandes vocales disponibles.
+* Ajouter les vôtres !
