@@ -14,17 +14,17 @@ requirements.txt est disponible dans le dépôt.
 ## Ubuntu Linux
 
 * Installer les paquets nécéssaires suivants : ``sudo apt-get install -y python python-dev python-pip build-essential swig git libpulse-dev espeak libttspico-utils``
-* Installer les dépendances Python : `pip install -r requirements.txt`
+* Installer les dépendances Python : `pip3 install -r requirements.txt`
 
 ## Arch Linux
 
 * Installer les paquets nécéssaires suivants : ``trizen -S swig espeak pico-tts svox-pico-bin`` ou ``yaourt -S swig espeak pico-tts svox-pico-bin``
-* Installer les dépendances Python : `pip install -r requirements.txt`
+* Installer les dépendances Python : `pip3 install -r requirements.txt`
 
 # Pour utiliser Open Assistant
 
 * [Téléchargez Open Assistant](https://github.com/Paullux/oa-core/archive/master.zip)
-* Lancer Open Assistant dans le dossier dézippé, issue du téléchargement : ``python -m oa``
+* Lancer Open Assistant dans le dossier dézippé, issue du téléchargement : ``python3 -m oa``
 * Vérifier que votre microphone est opérationnel et que les différents niveaux sonores sont correctement réglés.
 * Dîtes "Démarre Cerveau !" pour le test d'écoute. Si vous entendez R2D2, le cerveau "boot" vous entend.
 * Dîtes "Lance Assistant !" pour lancer le cerveau "root". Dîte "Démarre Cerveau !" et vous entenderez la réponse, "Salut tout le monde !"
